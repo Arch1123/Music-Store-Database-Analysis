@@ -1,124 +1,89 @@
-
-## **Project Title: Music Store Database Analysis**  
-
-### **Project Description**  
-This project analyzes a music store’s sales, customers, and inventory using SQL. The dataset includes **albums, artists, customers, invoices, employees, genres, playlists, and tracks**. The goal is to extract business insights through SQL queries.  
-
-### **Tech Stack:**  
-- **Database:** PostgreSQL / MySQL / SQL Server  
-- **Tools:** MySQL Workbench / SQLite  
-- **Data Source:** Open source CSV files  
+Here’s your updated resume with the additional project:  
 
 ---
 
-## **1️⃣ Database Schema Design**  
-The music store database consists of the following tables:  
+# Archit Garg  
 
-| **Table Name**     | **Description** |  
-|--------------------|----------------|  
-| **artist**         | Stores artist details |  
-| **album**          | Contains album details linked to artists |  
-| **track**          | Tracks and their metadata, including album, genre, and media type |  
-| **genre**          | Stores different music genres |  
-| **media_type**     | Defines available media formats |  
-| **playlist**       | Stores playlists created by customers |  
-| **playlist_track** | Links tracks to playlists |  
-| **customer**       | Stores customer details |  
-| **invoice**        | Sales transactions with customers |  
-| **invoice_line**   | Detailed breakdown of each invoice |  
-| **employee**       | Stores employee details |  
+📞 +91 9759032501  |  📧 architgarg9890@gmail.com  |  🌐 [LinkedIn](https://www.linkedin.com/in/archit-garg-179b47233)  |  💻 [GitHub](https://github.com/Arch1123)  
 
----
+---  
 
-## **2️⃣ SQL Queries & Business Insights**  
+## **About Me**  
+I am a dedicated finance and analytics professional with a strong background in data analysis, financial modeling, and stock market research. With hands-on experience in MySQL, Microsoft Excel, Power BI, and regression analysis, I excel at transforming raw data into actionable insights. My passion lies in leveraging analytical tools to drive strategic decision-making and enhance financial performance.  
 
-### **A. Customer Analysis**  
-1. **Top 5 customers who spent the most money:**  
-   ```sql
-   SELECT c.customer_id, c.first_name, c.last_name, SUM(i.total) AS total_spent
-   FROM customer c
-   JOIN invoice i ON c.customer_id = i.customer_id
-   GROUP BY c.customer_id, c.first_name, c.last_name
-   ORDER BY total_spent DESC
-   LIMIT 5;
-   ```
+---  
 
-2. **Number of customers by country:**  
-   ```sql
-   SELECT country, COUNT(customer_id) AS total_customers
-   FROM customer
-   GROUP BY country
-   ORDER BY total_customers DESC;
-   ```
+## **Education**  
 
-### **B. Sales Performance**  
-3. **Monthly revenue trend:**  
-   ```sql
-   SELECT DATE_TRUNC('month', invoice_date) AS month, SUM(total) AS revenue
-   FROM invoice
-   GROUP BY month
-   ORDER BY month;
-   ```
+### ICFAI Business School, Gurgaon, India  
+**Post Graduate Programme in Management (Finance and Analytics)**  
+May 2023 - Present  
 
-4. **Most sold tracks:**  
-   ```sql
-   SELECT t.name, COUNT(il.track_id) AS times_sold
-   FROM invoice_line il
-   JOIN track t ON il.track_id = t.track_id
-   GROUP BY t.name
-   ORDER BY times_sold DESC
-   LIMIT 10;
-   ```
+### Rastriya Kisan Post Graduation College, Shamli, India  
+**Bachelor of Science**  
+July 2019 - Feb 2022  
 
-### **C. Inventory & Music Insights**  
-5. **Top 5 most popular genres by sales:**  
-   ```sql
-   SELECT g.name AS genre, COUNT(il.track_id) AS total_sold
-   FROM invoice_line il
-   JOIN track t ON il.track_id = t.track_id
-   JOIN genre g ON t.genre_id = g.genre_id
-   GROUP BY g.name
-   ORDER BY total_sold DESC
-   LIMIT 5;
-   ```
+### Sarti Devi Raja Ram Public School, Shamli, India  
+**Higher Secondary (Class XII)**  
+June 2018 - June 2019  
 
-6. **Albums with the highest number of tracks:**  
-   ```sql
-   SELECT a.title, COUNT(t.track_id) AS track_count
-   FROM album a
-   JOIN track t ON a.album_id = t.album_id
-   GROUP BY a.title
-   ORDER BY track_count DESC
-   LIMIT 5;
-   ```
+---  
 
----
+## **Technical Skills**  
+- MySQL  
+- Microsoft Excel  
+- Data Mining & Cleaning  
+- Data Visualization (Power BI)  
+- Decision Making  
+- Data Modeling  
+- Regression & Time Series Analysis  
 
-## **3️⃣ Database Optimization**  
-- **Indexes:** Improve query performance using indexes.  
-   ```sql
-   CREATE INDEX idx_invoice_date ON invoice(invoice_date);
-   CREATE INDEX idx_customer_country ON customer(country);
-   ```
-- **Views:** Create pre-aggregated views for frequent queries.  
-   ```sql
-   CREATE VIEW top_customers AS
-   SELECT c.customer_id, c.first_name, c.last_name, SUM(i.total) AS total_spent
-   FROM customer c
-   JOIN invoice i ON c.customer_id = i.customer_id
-   GROUP BY c.customer_id, c.first_name, c.last_name
-   ORDER BY total_spent DESC;
-   ```
+---  
 
----
+## **Professional Experience**  
 
-## **4️⃣ How to Run This Project**  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/music-store-sql.git
-   cd music-store-sql
-   ```
-2. Import the dataset into PostgreSQL/MySQL.  
-3. Run SQL queries in your database tool.  
+### Financial Analyst  
+**Bharti AXA Life Insurance Ltd., Mumbai, India**  
+Feb 2024 – May 2024  
+- Designed and implemented trading strategies to capitalize on undervalued stocks, improving overall portfolio performance.  
+- Conducted fundamental analysis of 30 companies, identifying growth opportunities and investment risks, leading to increased profitability.  
+- Built financial models, including Discounted Cash Flow (DCF) and Comparable Company Analysis (CCA), for accurate firm valuation.  
 
----
+---  
+
+## **Projects**  
+
+### **[Music Store Database Analysis using SQL](https://github.com/Arch1123/Music-Store-Database-Analysis) (March 2024)**  
+- Conducted in-depth SQL analysis on a music store database to extract sales trends, customer preferences, and artist popularity.  
+- Designed complex SQL queries to optimize data retrieval, improving decision-making for business strategies.  
+- Identified key revenue-driving genres and artists, helping in targeted marketing and sales improvements.  
+
+### **[Valuation Growth Model](https://github.com/Arch1123/Valuation-Model) (Feb 2024)**  
+- Estimated project financial performance based on market conditions, revenue assumptions, and cost structures.  
+- Evaluated the impact of risk factors on valuation and developed mitigation strategies.  
+
+### **[Share Price Prediction for TCS using Regression](https://github.com/Arch1123/Share-Price-Prediction-for-TCS-using-Regression) (July 2023)**  
+- Developed regression models to predict TCS share price movements using historical data, financial indicators, and market trends.  
+- Implemented data-driven strategies to enhance investment decisions and forecast stock price fluctuations effectively.  
+
+---  
+
+## **Certifications & Achievements**  
+- Awarded **Best Performance** in Index Certification Program for excellence in stock market analysis.  
+- Achieved **10 CGPA** in Class 10 Board Exams.  
+- **Certifications:**  
+  - Making Business Dashboards Using Power BI  
+  - Microsoft Excel: Beginner to Advanced  
+  - Microsoft SQL  
+
+---  
+
+## **Extra-Curricular Activities**  
+- Participated in **Blitzkrieg’23**, a financial insights event at IBS Gurgaon, enhancing analytical skills in real-world financial scenarios.  
+- Spearheaded a **fundraising campaign for a local dog NGO**, demonstrating leadership and project management skills.  
+- Actively involved in **social welfare programs** organized by the Social Club of CCS University.  
+
+---  
+
+**Let’s Connect!**  
+📧 architgarg9890@gmail.com | 🌐 [LinkedIn](https://www.linkedin.com/in/archit-garg-179b47233) | 💻 [GitHub](https://github.com/Arch1123)  
