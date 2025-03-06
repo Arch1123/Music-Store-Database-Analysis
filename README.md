@@ -8,7 +8,7 @@ This project analyzes a music store’s sales, customers, and inventory using SQ
 - **Tools**: pgAdmin / MySQL Workbench / SQLite  
 - **Data Source**: Provided CSV files  
 
-## 1⃣ Database Schema Design
+## 1 Database Schema Design
 The music store database consists of the following tables:
 
 | Table Name      | Description                                        |
@@ -25,7 +25,7 @@ The music store database consists of the following tables:
 | invoice_line   | Detailed breakdown of each invoice                |
 | employee       | Stores employee details                           |
 
-## 2⃣ SQL Queries & Business Insights
+## 2 SQL Queries & Business Insights
 
 ### A. Customer Analysis
 #### Top 5 customers who spent the most money:
@@ -84,7 +84,7 @@ ORDER BY track_count DESC
 LIMIT 5;
 ```
 
-## 3⃣ Database Optimization
+## 3 Database Optimization
 ### Indexes: Improve query performance using indexes.
 ```sql
 CREATE INDEX idx_invoice_date ON invoice(invoice_date);
@@ -100,7 +100,7 @@ GROUP BY c.customer_id, c.first_name, c.last_name
 ORDER BY total_spent DESC;
 ```
 
-## 4⃣ How to Run This Project
+## 4 How to Run This Project
 ```sh
 git clone https://github.com/yourusername/music-store-sql.git
 cd music-store-sql
