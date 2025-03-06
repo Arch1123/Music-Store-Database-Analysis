@@ -6,8 +6,8 @@ This project analyzes a music store’s sales, customers, and inventory using SQ
 
 ### **Tech Stack:**  
 - **Database:** PostgreSQL / MySQL / SQL Server  
-- **Tools:** pgAdmin / MySQL Workbench / SQLite  
-- **Data Source:** Provided CSV files  
+- **Tools:** MySQL Workbench / SQLite  
+- **Data Source:** Open source CSV files  
 
 ---
 
